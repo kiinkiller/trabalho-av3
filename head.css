@@ -1,0 +1,24 @@
+header{
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+}
+
+header h1{
+    color: aliceblue;
+    font-size: 3em;
+    text-align: center;
+    cursor: pointer;
+}
+
+header nav{
+    display: flex;
+    color: rgb(255, 255, 255);
+    align-items: center;
+}
+header a{
+    color: #FFD700;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}

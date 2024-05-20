@@ -1,0 +1,16 @@
+
+/*
+#search-input, #search-button {
+    display: inline-block;
+}
+
+.historico-conversoes {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 200px; 
+    height: 100vh; 
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #FFD700 ; 
+}

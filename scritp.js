@@ -70,9 +70,12 @@ function valueFormatter(value, currency){
 
 function atualizarHistorico() {
     historicoSection.innerHTML = '';
+    historicoSection.classList.add("historico")
     historicoDeConversao.forEach((conversao, index) => {
         const conversaoElement = document.createElement('p');
         conversaoElement.textContent = `Conversão ${index + 1}: ${conversao.valorOriginal} BRL = ${valueFormatter(conversao.resultado, conversao.medida.toUpperCase())}`;
         historicoSection.appendChild(conversaoElement);
+
+
     });
 }

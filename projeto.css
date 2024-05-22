@@ -31,3 +31,8 @@ input, select, button{
 input :focus, select :focus{
   box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
+
+.historico{
+  height: 60px;
+  overflow-y:auto ;
+}

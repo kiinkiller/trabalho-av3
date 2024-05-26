@@ -17,7 +17,9 @@ const historicoResults = document.getElementById('historico-results');
 function handleSubmit(e){
     e.preventDefault();
 
-    if(!inputValue.value || inputValue.value <= 0){
+    const numberFormated = Number(inputValue.value.replace(",",".") ) 
+
+    if(!numberFormated || numberFormated <= 0){
         alert('informe um valor valido!');
         return;
     } else if(!selectedCurrency.value){
@@ -69,11 +71,12 @@ function valueFormatter(value, currency){
 };
 
 function atualizarHistorico() {
+
     historicoSection.innerHTML = '';
     historicoSection.classList.add("historico")
     historicoDeConversao.forEach((conversao, index) => {
         const conversaoElement = document.createElement('p');
-        conversaoElement.textContent = `Conversão ${index + 1}: ${conversao.valorOriginal} BRL = ${valueFormatter(conversao.resultado, conversao.medida.toUpperCase())}`;
+        conversaoElement.textContent = `Conversão ${index + 1}: ${conversao.valorOriginal.replace(".",",")} BRL = ${valueFormatter(conversao.resultado, conversao.medida.toUpperCase())}`;
         historicoSection.appendChild(conversaoElement);
 
 
